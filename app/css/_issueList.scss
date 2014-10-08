@@ -1,0 +1,24 @@
+.issueList {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+}
+
+.issueListItem {
+
+  cursor: default;
+
+  &.isSelected {
+    background-color: lighten($base2, 5);
+  }
+}
+
+.issueListItem-title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 15px;
+}

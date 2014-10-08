@@ -1,0 +1,24 @@
+{
+  "name": "github-issue-browser",
+  "version": "1.0.0",
+  "authors": [
+    "ykhs"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "marionette": "~2.2.1",
+    "backbone.localStorage": "~1.1.13",
+    "backbone.stickit": "~0.8.0",
+    "backbone.picky": "~0.2.0",
+    "mousetrap": "~1.4.6",
+    "spin.js": "~2.0.1",
+    "bootstrap": "~3.2.0"
+  }
+}

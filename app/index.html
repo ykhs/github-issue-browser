@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Github-Issue-Brower</title>
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="./main.css">
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/underscore/underscore.js"></script>
+  <script src="../bower_components/backbone/backbone.js"></script>
+  <script src="../bower_components/backbone.localStorage/backbone.localStorage.js"></script>
+  <script src="../bower_components/backbone.picky/lib/backbone.picky.js"></script>
+  <script src="../bower_components/backbone.stickit/backbone.stickit.js"></script>
+  <script src="../bower_components/marionette/lib/backbone.marionette.js"></script>
+  <script src="../bower_components/spin.js/spin.js"></script>
+  <script src="../bower_components/mousetrap/mousetrap.js"></script>
+  <script src="./bundle.js"></script>
+</head>
+<body>
+  <div class="surface"></div>
+  <div class="modal fade"></div>
+  <div class="modal-backdrop fade"></div>
+  <script>
+    $(function () {
+      App.start();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+.repositoryConfig {
+
+}
+
+.repositoryConfig-body {
+  min-height: 400px;
+}
+
+.repositoryConfig-relativeWrapper {
+  position: relative;
+  height: 350px;
+}
+
+.repositoryConfig-childViewContainer {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  overflow: auto;
+}

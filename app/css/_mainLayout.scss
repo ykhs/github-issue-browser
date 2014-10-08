@@ -1,0 +1,36 @@
+.mainLayout {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  color: $base03;
+  background-color: $base3;
+}
+
+.mainLayout-sidebar {
+  display: flex;
+  flex: initial;
+  width: 35%;
+  color: $base3;
+  background-color: $base02;
+
+  user-select: none;
+}
+
+.mainLayout-repos {
+  position: relative;
+  flex: initial;
+  width: 50%;
+}
+
+.mainLayout-issues {
+  position: relative;
+  flex: initial;
+  width: 50%;
+  color: $base03;
+  background-color: $base2;
+}
+
+.mainLayout-issue {
+  position: relative;
+  flex: auto;
+}
