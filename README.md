@@ -1,4 +1,4 @@
-# github-issue-browser
+# github-issue-browser [![Build Status](https://travis-ci.org/ykhs/github-issue-browser.svg?branch=master)](https://travis-ci.org/ykhs/github-issue-browser)
 
 github-issue-browser is Github Client to look over issues easily.
 
