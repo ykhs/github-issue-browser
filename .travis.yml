@@ -1,0 +1,21 @@
+language: node_js
+install:
+  - npm install -g bower gulp
+  - npm install
+  - bower install
+before_script:
+  - chmod u+x ./_travis/build.sh
+script:
+  - './_travis/build.sh'
+node_js:
+    - '0.10'
+deploy:
+  provider: releases
+  api_key:
+    secure: NP7UogJRcu6wNpmFQUKorCOp54/ohBQfETk5++EcONgpqt0m6IWoVcOxdmzmyr3//BNNx7vug8MOS669UaPKtXxl9V3G2igaZhEl9RkFZbbaC/3KDpepZ60fQ5jXkGNRf/BuOfEUrLdAbeaji1ZyRZSZMF4pu+XCP6GxtZ6cTCQ=
+  file: 'build/github-issue-browser-osx.zip'
+  skip_cleanup: true
+  on:
+    repo: ykhs/github-issue-browser
+    tags: true
+    all_branches: true
