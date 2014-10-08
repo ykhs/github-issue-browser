@@ -15,7 +15,7 @@ Built with [node-webkit](https://github.com/rogerwang/node-webkit).
 
 ## Installation
 
-1. Download binary
+1. [Download binary](https://github.com/ykhs/github-issue-browser/releases/latest)
 1. Generate new token
 1. Launch github-issue-browser.app
 1. Input your username and token
