@@ -44,28 +44,22 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('templates', function () {
-  runSequence('scripts', function () {
-    gulp.src('app/templates/**/*.hbs')
-      .pipe(handlebars())
-      .pipe(wrap('Handlebars.template(<%= contents %>)'))
-      .pipe(declare({
-        root: 'exports',
-        noRedeclare: true,
-        processName: function(filePath) {
-          return declare.processNameByPath(filePath.replace('app/templates/', ''));
-        }
-      }))
-      .pipe(concat('templates.js'))
-      .pipe(wrap('var Handlebars = require("handlebars");\n <%= contents %>'))
-      .pipe(gulp.dest('app'));
-  });
+  return gulp.src('app/templates/**/*.hbs')
+    .pipe(handlebars())
+    .pipe(wrap('Handlebars.template(<%= contents %>)'))
+    .pipe(declare({
+      root: 'exports',
+      noRedeclare: true,
+      processName: function(filePath) {
+        return declare.processNameByPath(filePath.replace('app/templates/', ''));
+      }
+    }))
+    .pipe(concat('templates.js'))
+    .pipe(wrap('var Handlebars = require("handlebars");\n <%= contents %>'))
+    .pipe(gulp.dest('app'));
 });
 
-gulp.task('default', function (cb) {
-  runSequence(['templates', 'jshint', 'scripts', 'styles'], cb);
-});
-
-gulp.task('nwbuild', ['clean', 'default'], function () {
+gulp.task('node-webkit-builder', function () {
   var nw = new NwBuilder({
     version: 'latest',
     files: ['./**', '!./cache/**', '!./build/**'],
@@ -79,6 +73,14 @@ gulp.task('nwbuild', ['clean', 'default'], function () {
   return nw.build().catch(function (err) {
     gutil.log('node-webkit-builder', err);
   });
+});
+
+gulp.task('default', function () {
+  runSequence(['templates', 'jshint', 'scripts', 'styles']);
+});
+
+gulp.task('build', function () {
+  runSequence('clean', ['templates', 'scripts', 'styles'], 'node-webkit-builder');
 });
 
 gulp.task('watch', function () {

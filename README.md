@@ -37,7 +37,7 @@ During the first launch, you will be asked username and token.
 ```
 npm install
 bower install
-gulp nwbuild
+gulp build
 ```
 
 ## License
