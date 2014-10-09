@@ -3,8 +3,6 @@ install:
   - npm install -g bower gulp
   - npm install
   - bower install
-before_script:
-  - chmod u+x ./_travis/build.sh
 script:
   - './_travis/build.sh'
 node_js:
